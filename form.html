@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Styles for the form container */
+    .form-container {
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc; /* Add border */
+    z-index: 9999;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Button to open the form -->
+<button id="openFormBtn">Open Form</button>
+
+<!-- The form container -->
+<div class="form-container" id="formContainer" style="width: 50%; margin: auto;">
+  <h2>Student Payment Form</h2>
+  <form action="#" method="post">
+    <div class="row form-group">
+      <div class="col-md-6">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="fee">Fee:</label>
+        <input type="number" id="fee" name="fee" class="form-control" required>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-md-6">
+        <label for="balance">Balance:</label>
+        <input type="number" id="balance" name="balance" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="paid">Paid:</label>
+        <input type="number" id="paid" name="paid" class="form-control" required>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-md-6">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="remark">Remark:</label>
+        <textarea id="remark" name="remark" class="form-control" rows="4"></textarea>
+      </div>
+    </div>
+    <div class="button-container text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" id="closeFormBtn" class="btn btn-secondary">Close</button>
+    </div>
+  </form>
+</div>
+
+<!-- Add Bootstrap JS and jQuery links -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="scripts.js"></script>
+<!-- <script>
+    $(document).ready(function() {
+  $("#openFormBtn").click(function() {
+    // Show the form container
+    $("#formContainer").fadeIn();
+  });
+
+  $("#closeFormBtn").click(function() {
+    // Hide the form container
+    $("#formContainer").fadeOut();
+  });
+});
+
+</script> -->
+</body>
+</html>

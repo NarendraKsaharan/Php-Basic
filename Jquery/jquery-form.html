@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Design</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <style>
+        .main{
+            width: 30%;
+            margin: 50px auto;
+        }
+        .register{
+            width: 100%;
+            /* border: 2px solid red; */
+            padding: 20px;
+            background-color: skyblue;
+            box-shadow: 1px 1px 9px 2px grey
+        }
+        input{
+            padding: 10px;
+            margin-top: 5px;
+        }
+        input[type='email']:invalid {
+	        border: 2px solid red;
+        }
+        input[type='password']:invalid {
+	        border: 2px solid red;
+        }
+        input#submit{
+            width: 30%;
+            font-size: 18px;
+            padding: 7px;
+            font-family: sans-serif;
+            font-weight: 600;
+            border-radius: 7px;
+            background-color: chocolate;
+            color: blue;
+            cursor: pointer;
+            border: 1px solid gold;
+            box-shadow: 1px 1px 5px lightslategrey;
+            margin-left: 35%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="register">
+            <form action="" id="register">
+                <table>
+                    <tr>
+                        <td><input type="text" name="name" id="name" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" name="email" id="email" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="pass" id="pass" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="submit" id="submit" value="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+
+
+$(document).ready(function() {
+    $('#submit').hover(function() {
+        if($('#name').val() == '' || $('#email').val() == '' || ($('#pass').val() == '' || !/^((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,})/.test($('#pass').val()))) {
+            $(this).animate({
+                'marginLeft': '+=70%',
+                'marginRight': '-=70%'
+            }, 100);
+        }
+    }, function() {
+        $(this).animate({
+            'marginLeft': '0px',
+            'marginRight': '0px'
+        }, 100);
+    });
+
+    $('#register').validate();
+
+    // $('#register').validate({
+    //     rules: {
+    //         name: {
+    //             required: true
+    //         },
+    //         email: {
+    //             required: true,
+    //             email: true
+    //         },
+    //         pass: {
+    //             required: true,
+    //             pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
+    //         }
+    //     },
+        // messages: {
+        //     pass: {
+
+        //         pattern: ""
+        //     }
+        // },
+        // submitHandler: function(form) {
+        //     form.submit();
+        // }
+    // });
+});
+
+
+
+// $(document).ready(function() {
+//     $('#submit').hover(function() {
+//         if($('#name').val() == '' || $('#email').val() == '' || $('#pass').val() == '') {
+//             $(this).animate({
+//                 'marginLeft': '+=80%',
+//                 'marginRight': '-=80%'
+//             }, 200);
+//         }
+//     },
+//      function() {
+//         $(this).animate({
+//             'marginLeft': '0px',
+//             'marginRight': '0px'
+//         }, 200);
+//     });
+
+//     $('#register').validate({
+//         rules: {
+//             name: {
+//                 required: true
+//             },
+//             email: {
+//                 required: true,
+//                 email: true
+//             },
+//             pass: {
+//                 required: true
+//             }
+//         }
+//         ,
+//         submitHandler: function(form) {
+//             form.submit();
+//         }
+//     });
+// });
+
+</script>
+
+</html>

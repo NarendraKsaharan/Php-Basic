@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+body{
+    background-color: aliceblue;
+}
+.main{
+    width: 30%;
+    margin: 0px auto 0px auto;
+}
+h2{
+	width: 43%;
+    margin: auto;
+	padding-top: 30px;
+	font-family: sans-serif;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+.register {
+	width: 100%;
+	background: #fdf9f9;
+	border: 1px solid red;
+	border-radius: 6px;
+	font-size: 17px;
+}
+#register {
+	margin: 16px 36px;
+}
+label {
+	margin-right: 24px;
+}
+input {
+    margin-top: 6px;
+}
+span {
+	font-size: 13px;
+}
+.top {
+	margin-bottom: 58px;
+    padding-top: 2px;
+}
+.left {
+	display: inline;
+	margin-left: 40px;
+}
+#submit {
+	padding: 5px;
+}

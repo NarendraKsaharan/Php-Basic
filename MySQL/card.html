@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css.css"> 
+</head>
+
+<body>
+    <div class="main">
+        <div class="register">
+            <form action="" id="register">
+                <h2>Step 1: Your Details</h2>
+                <div class="border">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="First and Last Name">
+                </div>
+                <div class="border">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="exp@domain.com">
+                </div>
+                <div class="border">
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" placeholder="Eg.+447500000">
+                </div><h2>Step 2: Delivery Address</h2>
+                <div class="fix">
+                    <p class="add">Address</p>
+                    <textarea name="address" id="address" cols="27" rows="5"></textarea>
+                </div>
+                <div class="fix">
+                    <label for="pin">Post Code</label>
+                    <input type="text" name="post_code">
+                </div>        
+                <div class="fix">
+                    <label for="country">Country</label>
+                    <input type="text" name="Country" id="con">
+                </div>        
+                <h2>Step 3: Card Details</h2>
+                <div class="icon">
+                    <label for="type">Card Type</label><br>
+                    <input type="radio" name="type" value="VISA"><span>&nbsp;<i class="fa-brands fa-cc-visa"></i>VISA</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="type" value="AmEx"><span>&nbsp;<i class="fa-brands fa-cc-amex"></i>AmEx</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="type" value="Mastercard"><span>&nbsp;<i class="fa-brands fa-cc-mastercard"></i>Mastercard</span>
+                </div>
+                <div class="card">
+                    <label for="cnumber">Card  Number</label>
+                    <input type="text" name="card_number">
+                </div>
+                <div class="card">
+                    <label for="scode">Security code</label>
+                    <input type="text" name="security_code">
+                </div>
+                <div class="card">
+                    <label for="cname">Name On Card</label>
+                    <input type="text" name="name_on_card" id="fit" placeholder="Exact Name As On Card">
+                </div>
+                <div class="submit">
+                    <input type="submit" name="submit" id="submit" value="BUY IT!">
+                </div> 
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+

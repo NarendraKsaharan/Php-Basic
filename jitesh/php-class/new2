@@ -1,0 +1,90 @@
+$x = 25;
+$y = 35;
+$z = "25";
+var_dump($x == $z);  // true
+var_dump($x === $z); // false
+var_dump($x != $y);  // true
+var_dump($x !== $z); // true
+var_dump($x < $y);   // true
+var_dump($x > $y);   // false
+var_dump($x <= $y);  // true
+var_dump($x >= $y);  // false
+
+Conditional Operator
+$a = 40;
+$b = 60;
+$c = 50;
+echo ($a === $b); // false
+echo ($a !== $c); // false
+$a = $c = "60";   // 
+echo ($a < $b);   // false
+echo ($b > $a);   // false
+echo ($a >= $c);  // true
+
+
+Operators Exercise
+========================================
+$x = 10;  
+$y = 20;  
+
+$x += $y;
+//$y -= $y;
+$x *= $y;
+echo $x."<br>".$y;
+$x = $y;
+$y /= $y;  
+$x %= $y;  
+echo $x."<br>".$y;
+
+========================================
+
+$x = 10;
+$y = 15;
+
+$z = $x == $y;
+echo $z."-<br>"; 
+$z = $x === $y;
+$z = $x != $y;
+echo $z."-<br>";
+$z = $x <> $y;
+$z = $x !== $y;
+echo $z."-<br>";
+$x = $z?$x:$y;
+$z = $x > $y;
+echo $z."-<br>";
+$z = $x < $y;
+$z = $x >= $y;
+echo $z."-<br>";
+$z = $x <= $y;
+$z = $x <=> $y;
+echo $z."-<br>";
+
+========================================
+
+$x = 11;
+++$x;
+echo $x++."-<br>"; // 12
+--$x;$y=$x;
+echo $x--."-<br>"; // 12
+echo $x += $x++;  // 23
+echo "-<br>".$y--."-<br>".--$y;
+echo "-<br>"; // 12,10
+echo $x -= ++$x;
+echo "-<br>"; // -1
+
+========================================
+
+$x = true;
+$y = false;
+$x = $x and $y; // false
+$y = $x or $y; // false
+$y = $x && $y; // false
+$x = $x || !$y; // truue
+echo $x."-<br>-".$y; // true,false
+echo !$x; // false
+
+========================================
+$t1 = "asdf";
+$t2 = "jkl";
+echo $t1.=$t2."gh<br>";
+cc
